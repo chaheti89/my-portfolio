@@ -115,7 +115,7 @@ const projects = [
             </p>
             <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight max-w-3xl mb-6">
               Hello! I build{" "}
-              <span className="text-blue-600 dark:text-blue-400">ML projects</span>{" "}
+              <span className="text-blue-600 dark:text-blue-400">Software projects</span>{" "}
               <span className="text-gray-400 dark:text-gray-500">(and cry)</span>{" "}
               but still love it.
             </h2>
