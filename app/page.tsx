@@ -189,16 +189,7 @@ const projects = [
                         <CodeBracketIcon className="w-4 h-4" /> GitHub
                       </a>
                     )}
-                    {p.colab && (
-                      <a
-                        href={p.colab}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex items-center justify-center gap-1 flex-1 px-3 py-2 rounded-xl text-sm border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                      >
-                        <BookOpenIcon className="w-4 h-4" /> Colab
-                      </a>
-                    )}
+                    
                   </div>
                 </article>
               ))}
