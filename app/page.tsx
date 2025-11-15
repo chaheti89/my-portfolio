@@ -126,12 +126,13 @@ const projects = [
 
             <div className="flex flex-wrap gap-4 justify-center">
               <a
-                href="mailto:chahetijha@gmail.com"
-                className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base shadow-lg shadow-blue-500/50 transition-transform hover:-translate-y-1"
-              >
-                <EnvelopeIcon className="w-5 h-5" />
-                Email me (plzz )
-              </a>
+  href="mailto:chahetijha@gmail.com"
+  className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base transition-transform hover:-translate-y-1"
+>
+  <EnvelopeIcon className="w-5 h-5" />
+  Email me (plzz )
+</a>
+
               <a
   href="/offcampus-1 (1).pdf"
   download
