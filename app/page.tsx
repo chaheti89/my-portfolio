@@ -34,43 +34,41 @@ export default function Home() {
     }
   };
 
-  const projects = [
-    {
-      title: "House Price Prediction",
-      description:
-        "Regression model using Scikit-learn. EDA, feature engineering and model explainability. Includes trained model and README.",
-      github: "https://github.com/chahetijha/house-price-prediction",
-      colab:
-        "https://colab.research.google.com/github/chahetijha/house-price-prediction/blob/main/notebook.ipynb",
-      tags: ["Regression", "Scikit-learn", "EDA"],
-      type: "Classic ML",
-    },
-    {
-      title: "Image Classification CNN",
-      description:
-        "Convolutional Neural Network built with TensorFlow/Keras for multi-class image classification. Includes data augmentation and transfer learning.",
-      github: "https://github.com/chahetijha/image-classification-cnn",
-      colab:
-        "https://colab.research.google.com/github/chahetijha/image-classification-cnn/blob/main/notebook.ipynb",
-      tags: ["Deep Learning", "CNN", "TensorFlow"],
-      type: "Computer Vision",
-    },
-    {
-      title: "Customer Churn Analysis",
-      description:
-        "End-to-end pipeline: EDA, feature selection, model training and dashboard for churn prediction.",
-      github: "https://github.com/chahetijha/customer-churn-analysis",
-      colab:
-        "https://colab.research.google.com/github/chahetijha/customer-churn-analysis/blob/main/notebook.ipynb",
-      tags: ["Classification", "Pandas", "XGBoost"],
-      type: "Data Science",
-    },
-  ];
+const projects = [
+  {
+    title: "TCP Chat",
+    description:
+      "A simple TCP-based real-time chat application using Python’s socket and threading libraries. Includes both client and server implementations.",
+    github: "https://github.com/chaheti89/tcp-chat",
+    tags: ["Python", "Socket Programming", "Networking"],
+    type: "Systems / Networking",
+  },
+
+  {
+    title: "AutoDoc – API Documentation Generator",
+    description:
+      "A full-stack web app that analyzes public REST APIs and auto-generates structured documentation including schema, response types, and example payloads.",
+    github: "https://github.com/chaheti89/autodoc",
+    tags: ["Full Stack", "React", "Flask", "API Analysis"],
+    type: "Web App",
+  },
+
+  {
+    title: "Debate Bot (WIP)",
+    description:
+      "An AI-powered debate assistant that generates arguments, counters, and structured debate flow. Currently under development.",
+    github: "", // add later
+    tags: ["AI", "NLP", "Chatbot"],
+    type: "AI Project",
+  },
+];
+
+
 
   return (
     <>
       <Head>
-        <title>Chaheti Jha — Machine Learning Portfolio</title>
+        <title>Chaheti Jha — Software Developer Portfolio</title>
         <meta
           name="description"
           content="Chaheti Jha — Machine Learning Enthusiast | Projects & Demos"
@@ -113,7 +111,7 @@ export default function Home() {
           {/* HERO */}
           <section className="pt-24 pb-28 text-center flex flex-col items-center">
             <p className="text-xl font-medium text-blue-600 dark:text-blue-400 mb-6">
-              Machine Learning Enthusiast
+             Machine Learning & AI Enthusiast | Aspiring Software Engineer
             </p>
             <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight max-w-3xl mb-6">
               Hello! I build{" "}
@@ -122,9 +120,7 @@ export default function Home() {
               but still love it.
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mb-8">
-              I'm a final year engineering student from RV College of Engineering,
-              Bengaluru. I enjoy turning real datasets into working ML & AI
-              projects. Always eager to learn — currently{" "}
+            I'm a final-year engineering student at RV College of Engineering, Bengaluru. I enjoy building end-to-end software, AI, and system projects basically from designing APIs to training ML models and deploying real applications. I'm always curious, always experimenting, and always eager to learn new technologies.— currently{" "}
               <strong>Open to Internships</strong>.
             </p>
 
