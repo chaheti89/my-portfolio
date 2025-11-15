@@ -116,8 +116,8 @@ const projects = [
             <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight leading-tight max-w-3xl mb-6">
               Hello! I build{" "}
               <span className="text-blue-600 dark:text-blue-400">Software projects</span>{" "}
-              <span className="text-gray-400 dark:text-gray-500">(and cry)</span>{" "}
-              but still love it.
+              <span className="text-gray-400 dark:text-gray-500"></span>{" "}
+              and love it.
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mb-8">
             I'm a final-year engineering student at RV College of Engineering, Bengaluru. I enjoy building end-to-end software, AI, and system projects basically from designing APIs to training ML models and deploying real applications. I'm always curious, always experimenting, and always eager to learn new technologies.— currently{" "}
@@ -130,7 +130,7 @@ const projects = [
   className="flex items-center gap-2 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-base transition-transform hover:-translate-y-1"
 >
   <EnvelopeIcon className="w-5 h-5" />
-  Email me (plzz )
+  Email me
 </a>
 
               <a
