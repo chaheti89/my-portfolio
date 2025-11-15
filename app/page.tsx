@@ -85,13 +85,15 @@ const projects = [
             </h1>
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/chaheti89"
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm px-3 py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-              >
-                GitHub
-              </a>
+  href="https://github.com/chaheti89"
+  target="_blank"
+  rel="noreferrer"
+  className="p-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9..."/>
+  </svg>
+</a>
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-blue-600 dark:text-blue-400 hover:scale-105 transition-transform"
