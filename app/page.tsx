@@ -76,8 +76,8 @@ const projects = [
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      
-        <div className="min-h-screen text-gray-800 dark:text-gray-100 transition-colors duration-500 font-sans">
+   
+<div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-500 font-sans"> 
 
         {/* HEADER */}
         <header className="w-full border-b border-gray-200 dark:border-gray-800 bg-gray-50/90 dark:bg-gray-900/90 backdrop-blur-md sticky top-0 z-10">
