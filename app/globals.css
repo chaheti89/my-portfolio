@@ -33,6 +33,11 @@ body {
 }
 
 /* ---- Soft Floating Aura Background ---- */
+.abstract-aura {
+  position: relative;
+  overflow: hidden;
+}
+
 .abstract-aura::before {
   content: "";
   position: fixed;
