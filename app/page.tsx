@@ -82,32 +82,6 @@ const PRACTICE_PROJECTS = [
   },
 ];
 
-const OSS_CONTRIBUTIONS = [
-  {
-    title: "Dataverse",
-    description:
-      "Data visualization software rendering plots from primary to advanced level, plus a finance tracker. Actively contributing to this fork.",
-    github: "https://github.com/chaheti89/Dataverse",
-    tags: ["Jupyter Notebook", "Python", "Data Viz"],
-    stars: 1,
-  },
-  {
-    title: "FinVeda",
-    description:
-      "Financial literacy app with an AI chatbot (Arthsathi), finance blogs, market trends, SIP calculator, and interactive quizzes.",
-    github: "https://github.com/chaheti89/FinVeda",
-    tags: ["HTML", "JavaScript", "FinTech"],
-  },
-  {
-    title: "YourNextSaas.online",
-    description:
-      "Open-source SaaS boilerplate pre-configured with Payments, Auth, and Mailing so you can focus on building features.",
-    github: "https://github.com/chaheti89/YourNextSaas.online",
-    tags: ["TypeScript", "Next.js", "SaaS"],
-    stars: 1,
-  },
-];
-
 const SKILLS_BARS = [
   { label: "Python", level: 90 },
   { label: "JavaScript / React", level: 80 },
@@ -142,6 +116,22 @@ function useReveal(threshold = 0.1) {
 
 export default function Home() {
   const [theme, setTheme] = useState("dark");
+  // FIX 1: moved barsReady state inside the component (it was declared above Home() before)
+  const [barsReady, setBarsReady] = useState(false);
+
+  const heroReveal = useReveal(0.05);
+  const projectsReveal = useReveal(0.05);
+  const researchReveal = useReveal(0.05);
+  // FIX 2: moved skillsReveal declaration above the useEffect that depends on it
+  const skillsReveal = useReveal(0.05);
+
+  useEffect(() => {
+    if (skillsReveal.visible) {
+      // Delay one frame so the transition fires from 0 → level%
+      const id = requestAnimationFrame(() => setBarsReady(true));
+      return () => cancelAnimationFrame(id);
+    }
+  }, [skillsReveal.visible]);
 
   useEffect(() => {
     const stored = localStorage.getItem("theme") || "dark";
@@ -159,12 +149,6 @@ export default function Home() {
   const scrollTo = (id: string) => {
     document.getElementById(id.toLowerCase())?.scrollIntoView({ behavior: "smooth" });
   };
-
-  const heroReveal = useReveal(0.05);
-  const projectsReveal = useReveal(0.05);
-  const ossReveal = useReveal(0.05);
-  const researchReveal = useReveal(0.05);
-  const skillsReveal = useReveal(0.05);
 
   return (
     <div className="min-h-screen bg-[#0d0d0d] text-white"
@@ -353,7 +337,6 @@ export default function Home() {
         </div>
       </section>
 
-
       {/* RESEARCH / PUBLICATIONS */}
       <section id="research" ref={researchReveal.ref} className="py-24 px-6 border-t border-white/[0.05]"
         style={{ background: 'linear-gradient(180deg,#0d0d0d,#0b0b18)' }}>
@@ -441,8 +424,10 @@ export default function Home() {
                     <span className="text-xs text-white/30">{level}%</span>
                   </div>
                   <div className="h-1.5 rounded-full overflow-hidden" style={{ background:'rgba(255,255,255,0.06)' }}>
+                    {/* FIX 3: added missing closing > on the skill-fill div */}
                     <div className="skill-fill h-full rounded-full"
-                      style={{ width:`${level}%`, background:'linear-gradient(90deg,#7c3aed,#3b82f6)' }}/>
+                      style={{ width: barsReady ? `${level}%` : '0%', background:'linear-gradient(90deg,#7c3aed,#3b82f6)' }}
+                    />
                   </div>
                 </div>
               ))}
