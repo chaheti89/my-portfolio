@@ -2,16 +2,15 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-"scripts": {
-  "dev": "set NEXT_DISABLE_DEVTOOLS=1 && set NEXT_DISABLE_TURBOPACK=1 && next dev",
-  "build": "next build",
-  "start": "next start",
-  "lint": "eslint"
-},
-
-
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "geist": "^1.7.0",
     "next": "15.3.1",
     "react": "19.2.0",
     "react-dom": "19.2.0"
